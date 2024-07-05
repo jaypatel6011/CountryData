@@ -14,7 +14,7 @@ function Task4() {
     async function fetchData() {
         setLoading(true)
         try {
-            const apiData = await fetch(`http://universities.hipolabs.com/search?country=India`);
+            const apiData = await fetch(`http://universities.hipolabs.com/search?country=${country}`);
             const result = await apiData.json();
             console.log(result)
             setDatas(result)
@@ -30,10 +30,10 @@ function Task4() {
     }, [country])
 
     console.log(datas)
-    async function changeHandler(e) {
+     function changeHandler(e) {
 
-        await setCountry(e.target.value)
-        await setCountrySelect(country)
+         setCountry(e.target.value)
+         setCountrySelect(country)
         console.log(country);
     }
 
