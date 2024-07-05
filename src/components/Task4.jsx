@@ -13,10 +13,14 @@ function Task4() {
 
     async function fetchData() {
         setLoading(true)
-        const apiData = await fetch(api)
-        const result = await apiData.json();
-        console.log(result)
-        setDatas(result)
+        try {
+            const apiData = await fetch(api)
+            const result = await apiData.json()
+            console.log(result)
+            setDatas(result)
+        } catch (error) {
+            console.log(error);
+        }
         setLoading(false)
 
     }
@@ -25,10 +29,10 @@ function Task4() {
     }, [country])
 
     console.log(datas)
-    function changeHandler(e) {
+    async function changeHandler(e) {
 
-        setCountry(e.target.value)
-        setCountrySelect(country)
+        await setCountry(e.target.value)
+        await setCountrySelect(country)
         console.log(country);
     }
 
