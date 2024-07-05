@@ -19,6 +19,7 @@ function Task4() {
             console.log(result)
             setDatas(result)
         } catch (error) {
+            alert(error)
             console.log(error);
         }
         setLoading(false)
@@ -41,8 +42,6 @@ function Task4() {
 
 
         <div className='w-full '>
-
-
             <div className='md:w-10/12 mx-auto'>
                 <div className='space-x-4 space-y-4 my-16 mx-auto text-white text-center'>
                     <label htmlFor="country" className='text-violet-700 font-bold text-xl'>Select Country</label>

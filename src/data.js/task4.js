@@ -1,1 +1,1 @@
-export const api = "http://universities.hipolabs.com/search?country=india"
+export const api = "http://universities.hipolabs.com/search?country"
