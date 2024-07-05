@@ -28,6 +28,7 @@ function Task4() {
     function changeHandler(e){
     
     setCountry(e.target.value)
+    setCountrySelect(e.target.value)
     console.log(country);
     }
 
