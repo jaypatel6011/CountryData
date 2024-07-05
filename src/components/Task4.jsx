@@ -39,11 +39,11 @@ function Task4() {
         <div className='w-full '>
 
 
-            <div className='w-min-10/12 mx-auto'>
-                <div className='space-x-4 space-y-4 my-16 mx-auto text-white'>
+            <div className='md:w-10/12 mx-auto'>
+                <div className='space-x-4 space-y-4 my-16 mx-auto text-white text-center'>
                     <label htmlFor="country" className='text-violet-700 font-bold text-xl'>Select Country</label>
 
-                    <select className=' border bottom-2 border-black px-3 text-black'
+                    <select className='border bottom-2 border-black px-3 text-black'
                         name="countryName" id="country" onChange={changeHandler} value={countrySelect.countryName}>
                         {
                             country_list.map((data, index) => (
@@ -52,7 +52,7 @@ function Task4() {
                         }
                     </select>
                 </div>
-                <table className=' w-full'>
+                <table className='w-full'>
                     <thead className='bg-rose-600 mx-auto'>
                         <tr>
                             <td className='py-3 px-8'>
@@ -80,9 +80,9 @@ function Task4() {
                                     (
                                         <tr key={index} className={`${index % 2 ? "bg-slate-300" : "bg-white"}`}>
                                             <td className='py-3 px-8'>{index + 1}</td>
-                                            <td>{data.name}</td>
+                                            <td className='py-3 px-8'>{data.name}</td>
                                             {/* <td>{data.state-province}</td> */}
-                                            <td>{data.web_pages}</td>
+                                            <td className='py-3 px-8'>{data.web_pages}</td>
                                         </tr>
                                     )
 
