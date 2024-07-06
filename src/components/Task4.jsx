@@ -20,7 +20,7 @@ function Task4() {
         setLoading(true)
 
         try {
-            const response = await fetch(url);
+            const response = await fetch(`${url}`);
             const result = await response.json();
             setDatas(result)
             console.log(result);
